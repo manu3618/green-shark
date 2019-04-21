@@ -5,25 +5,26 @@
 package article
 
 import (
-    "time"
-    "fmt"
+	"fmt"
+	"strings"
+	"time"
 )
 
 type Article struct {
-    content string
-    date time.Time
-    title string
+	content string
+	date    time.Time
+	title   string
 }
 
-func (art Article) toWordVector() map[string]int{
-	res :=make(map[string]int)
+func (art Article) toWordVector() map[string]int {
+	res := make(map[string]int)
 	var ok bool
 	var count int
-    var text:=art.content.Lower()
+	text := strings.ToLower(art.content)
 	for _, w := range strings.Fields(text) {
 		count, ok = res[w]
 		if ok {
-			res[w] = count +1
+			res[w] = count + 1
 		} else {
 			res[w] = 1
 		}
@@ -31,6 +32,10 @@ func (art Article) toWordVector() map[string]int{
 	return res
 }
 
-func (art Article) String() string{
-    return fmt.Sprintf("(%v) %v\n%v\n", date, title[:80], content[:160])
+func (art Article) String() string {
+	return fmt.Sprintf(
+		"(%v) %v\n%v\n",
+		art.date,
+		art.title[:80],
+		art.content[:160])
 }
