@@ -39,6 +39,19 @@ var samples = []ArticleTest{
 			"really":       1,
 			"interresting": 1},
 	},
+	{
+		article: Article{
+			date:    base_time.Add(19 * time.Minute),
+			title:   "Youhou",
+			content: "This word is duplicated duplicated, even Duplicated.",
+		},
+		bow: map[string]int{
+			"this":       1,
+			"word":       1,
+			"duplicated": 3,
+			"is":         1,
+			"even":       1},
+	},
 }
 
 func TestBow(t *testing.T) {
