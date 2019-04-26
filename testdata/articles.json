@@ -1,0 +1,20 @@
+[
+    {
+        "Id": "1a5b084f-ff4e-477f-924d-c75d60d4ac8b",
+        "Content": "This article is really interresting.",
+        "Date": "2019-01-10T23:00:00Z",
+        "Title": "Title"
+    },
+    {
+        "Id": "aee74c41-b2f2-4452-924f-02b8a98a40cf",
+        "Content": "This article is not really interresting.",
+        "Date": "2019-01-10T23:19:00Z",
+        "Title": "Youhou"
+    },
+    {
+        "Id": "7046144e-9357-4d2d-8a75-026399d0214a",
+        "Content": "This word is duplicated duplicated, even Duplicated.",
+        "Date": "2019-01-10T23:19:00Z",
+        "Title": "Youhou"
+    }
+]
