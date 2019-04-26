@@ -14,9 +14,10 @@ var base_time = time.Date(2019, time.January, 10, 23, 0, 0, 0, time.UTC)
 var samples = []ArticleTest{
 	{
 		article: Article{
-			date:    base_time,
-			title:   "Title",
-			content: "This article is really interresting.",
+			Date:    base_time,
+			Title:   "Title",
+			Content: "This article is really interresting.",
+			Id:      "1a5b084f-ff4e-477f-924d-c75d60d4ac8b",
 		},
 		bow: map[string]int{
 			"this":         1,
@@ -27,9 +28,10 @@ var samples = []ArticleTest{
 	},
 	{
 		article: Article{
-			date:    base_time.Add(19 * time.Minute),
-			title:   "Youhou",
-			content: "This article is not really interresting.",
+			Id:      "aee74c41-b2f2-4452-924f-02b8a98a40cf",
+			Date:    base_time.Add(19 * time.Minute),
+			Title:   "Youhou",
+			Content: "This article is not really interresting.",
 		},
 		bow: map[string]int{
 			"this":         1,
@@ -41,9 +43,10 @@ var samples = []ArticleTest{
 	},
 	{
 		article: Article{
-			date:    base_time.Add(19 * time.Minute),
-			title:   "Youhou",
-			content: "This word is duplicated duplicated, even Duplicated.",
+			Id:      "7046144e-9357-4d2d-8a75-026399d0214a",
+			Date:    base_time.Add(19 * time.Minute),
+			Title:   "Youhou",
+			Content: "This word is duplicated duplicated, even Duplicated.",
 		},
 		bow: map[string]int{
 			"this":       1,

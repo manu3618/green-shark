@@ -11,10 +11,10 @@ import (
 )
 
 type Article struct {
-	id      string
-	content string
-	date    time.Time
-	title   string
+	Id      string
+	Content string
+	Date    time.Time
+	Title   string
 }
 
 func (art Article) ToWordVector() map[string]int {
@@ -22,7 +22,7 @@ func (art Article) ToWordVector() map[string]int {
 	var ok bool
 	var count int
 	var ponct = []string{".", ";", ","}
-	text := strings.ToLower(art.content)
+	text := strings.ToLower(art.Content)
 	for _, char := range ponct {
 		text = strings.ReplaceAll(text, char, " ")
 	}
@@ -38,20 +38,20 @@ func (art Article) ToWordVector() map[string]int {
 }
 
 func (art Article) String() string {
-	repr_title := art.title
-	repr_content := art.content
+	repr_title := art.Title
+	repr_content := art.Content
 
-	if len(art.title) > 80 {
-		repr_title = art.title[:80]
+	if len(art.Title) > 80 {
+		repr_title = art.Title[:80]
 	}
-	if len(art.content) > 160 {
-		repr_content = art.content[:160]
+	if len(art.Content) > 160 {
+		repr_content = art.Content[:160]
 	}
 
 	return fmt.Sprintf(
 		"%v\t%v (%v)\n%v\n",
-		art.id,
+		art.Id,
 		repr_title,
-		art.date,
+		art.Date,
 		repr_content)
 }
