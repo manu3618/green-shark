@@ -11,6 +11,7 @@ import (
 )
 
 type Article struct {
+	id      string
 	content string
 	date    time.Time
 	title   string
@@ -37,9 +38,20 @@ func (art Article) ToWordVector() map[string]int {
 }
 
 func (art Article) String() string {
+	repr_title := art.title
+	repr_content := art.content
+
+	if len(art.title) > 80 {
+		repr_title = art.title[:80]
+	}
+	if len(art.content) > 160 {
+		repr_content = art.content[:160]
+	}
+
 	return fmt.Sprintf(
-		"(%v) %v\n%v\n",
+		"%v\t%v (%v)\n%v\n",
+		art.id,
+		repr_title,
 		art.date,
-		art.title[:80],
-		art.content[:160])
+		repr_content)
 }
