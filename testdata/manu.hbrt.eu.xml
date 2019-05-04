@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Manu</title>
+  <link href="http://manu.hbrt.eu/" rel="alternate"/>
+  <link href="http://manu.hbrt.eu/feeds/all.atom.xml" rel="self"/>
+  <id>http://manu.hbrt.eu/</id>
+  <updated>2019-04-01T19:47:00+02:00</updated>
+  <subtitle>Math, Aviation, *Nix, Ukulele</subtitle>
+  <entry>
+    <title>C*: Yaw</title>
+    <link href="http://manu.hbrt.eu/1683.html" rel="alternate"/>
+    <published>2019-04-01T19:47:00+02:00</published>
+    <updated>2019-04-01T19:47:00+02:00</updated>
+    <author>
+      <name>manu</name>
+    </author>
+    <id>tag:manu.hbrt.eu,2019-04-01:/1683.html</id>
+    <summary type="html">&lt;div class="docutils container"&gt;
+&lt;a class="reference external" href="https://commons.wikimedia.org/wiki/File:Aileron_de_requin.jpg"&gt;&lt;img alt="aileron" src="http://manu.hbrt.eu/images/Aileron_de_requin.jpg" style="width: 150px;" /&gt;&lt;/a&gt; Vertical stabilizer (Photo credit: Wikipedia)&lt;/div&gt;
+&lt;p&gt;This post is about &lt;a class="reference external" href="http://www.av8n.com/how/htm/yaw.html"&gt;yaw&lt;/a&gt; control.
+This is also the post for which I did not find many references.&lt;/p&gt;
+&lt;p&gt;Remember the yaw is the axis controlled by the rudder.
+The rudder acts as any foil, providing a force dependant of its angle of attack.
+This …&lt;/p&gt;</summary>
+    <content type="html">&lt;div class="docutils container"&gt;
+&lt;a class="reference external" href="https://commons.wikimedia.org/wiki/File:Aileron_de_requin.jpg"&gt;&lt;img alt="aileron" src="http://manu.hbrt.eu/images/Aileron_de_requin.jpg" style="width: 150px;" /&gt;&lt;/a&gt; Vertical stabilizer (Photo credit: Wikipedia)&lt;/div&gt;
+&lt;p&gt;This post is about &lt;a class="reference external" href="http://www.av8n.com/how/htm/yaw.html"&gt;yaw&lt;/a&gt; control.
+This is also the post for which I did not find many references.&lt;/p&gt;
+&lt;p&gt;Remember the yaw is the axis controlled by the rudder.
+The rudder acts as any foil, providing a force dependant of its angle of attack.
+This angle of attack is function of side slip angle (noted &lt;span class="formula"&gt;&lt;i&gt;β&lt;/i&gt;&lt;/span&gt;)
+and the rudder's deflection.&lt;/p&gt;
+&lt;p&gt;Basically, the rudder command an effort on the stabilizer, inducing a rotation around the yaw axis.
+Note that the stabilizer also induce a force on this axis.
+The stabilizer's force tend reduce &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Slip_(aerodynamics)#Sideslip"&gt;sideway slip&lt;/a&gt;.
+This momentum grows with speed.&lt;/p&gt;
+&lt;div class="section" id="on-the-way"&gt;
+&lt;h2&gt;On the way&lt;/h2&gt;
+&lt;p&gt;The aircraft velocity is high, there is little risks to stall.
+The goal is to avoid extra drag due to going sideways.
+When the pilot's rudder is at neutral position, the aircraft must go straight ahead and the pilot should command the sideslip angle.
+When performing turns, pilot's input to neutral must result coordinated turns (rudder not in neutral position).
+Yaw control is also used for stabilisation purpose (e.g. &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Yaw_damper"&gt;yaw damping&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="at-low-altitude"&gt;
+&lt;h2&gt;At low altitude&lt;/h2&gt;
+&lt;p&gt;When really close to the ground, roll cannot be used to control airplane's trajectory.
+The bank angle is limited due to both the ground clearance and the low speed (when near stall, having wings not leveled is not wise).
+Thus, the rudder is used to control direction.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="normal-law"&gt;
+&lt;h2&gt;Normal law&lt;/h2&gt;
+&lt;p&gt;Normal law is used in flight in normal condition. The A320 and the A380 does
+not act the same way.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;the A320 adds pilots' input and flight-by-wire (FBW) orders &lt;a class="footnote-reference" href="#id4" id="id1"&gt;[2]&lt;/a&gt;. The FBW
+system add orders so that with neutral pilot input, it handles yaw damping and
+coordinates turns&lt;/li&gt;
+&lt;li&gt;on the A380, the pilot's input commands sideslip angle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ground-law"&gt;
+&lt;h2&gt;Ground law&lt;/h2&gt;
+&lt;p&gt;On the A380, the pilot control the yaw rate &lt;a class="footnote-reference" href="#id3" id="id2"&gt;[1]&lt;/a&gt;. I found no evidence for the A320,
+thus I assume the FBW system adds no input.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="direct-law"&gt;
+&lt;h2&gt;Direct law&lt;/h2&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id2"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;source: A380 Briefing For Pilots, march 2006&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label" /&gt;&lt;col /&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="#id1"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;source: &lt;a class="reference external" href="https://assets.publishing.service.gov.uk/media/5422ee95e5274a1317000225/Airbus_A319-131__G-DBCI_08-08.pdf"&gt;AAIB Bulletin: 8/2008 incident report&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="non-related-articles"&gt;
+&lt;h2&gt;(Non-)related articles&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.hispanicbusiness.com/2014/7/25/special_conditions_airbus_model_a350-900_series.htm"&gt;Special Conditions: Airbus Model A350-900 Series Airplane; Electronic Flight-Control System: Lateral-Directional and Longitudinal Stability, and...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.pprune.org/private-flying/528720-yaw-roll-affect-heading.html"&gt;Yaw/roll - affect on heading&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://aeronauticshelp.wordpress.com/?p=52"&gt;Axes of Control&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+    <category term="C star"/>
+    <category term="Flight dynamics"/>
+    <category term="yaw"/>
+  </entry>
+  <entry>
+    <title>LaTeX makefile updated</title>
+    <link href="http://manu.hbrt.eu/latex-makefile-updated.html" rel="alternate"/>
+    <published>2019-03-29T10:28:00+01:00</published>
+    <updated>2019-03-29T10:28:00+01:00</updated>
+    <author>
+      <name>manu</name>
+    </author>
+    <id>tag:manu.hbrt.eu,2019-03-29:/latex-makefile-updated.html</id>
+    <summary type="html">&lt;p&gt;My default LaTeX makefile evolved. Here is an update:&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="http://manu.hbrt.eu/files/makefile.latex"&gt;makefile&lt;/a&gt; looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;pdflatex
+&lt;span class="nv"&gt;BIBTEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;bibtex
+&lt;span class="nv"&gt;BIB&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;RERUN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(There is undefined reference|Rerun to get (cross-references|the bars) right)&amp;#39;&lt;/span&gt;
+
+%.pdf:%.tex
+    &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt;
+    @if &lt;span class="o"&gt;[&lt;/span&gt; -e &lt;span class="nv"&gt;$*&lt;/span&gt;.bbl &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;BIBTEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
+    @if egrep -q &lt;span class="k"&gt;$(&lt;/span&gt;RERUN&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt;.log &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
+
+%.aux …&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;p&gt;My default LaTeX makefile evolved. Here is an update:&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="http://manu.hbrt.eu/files/makefile.latex"&gt;makefile&lt;/a&gt; looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;pdflatex
+&lt;span class="nv"&gt;BIBTEX&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;bibtex
+&lt;span class="nv"&gt;BIB&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="nv"&gt;RERUN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(There is undefined reference|Rerun to get (cross-references|the bars) right)&amp;#39;&lt;/span&gt;
+
+%.pdf:%.tex
+    &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt;
+    @if &lt;span class="o"&gt;[&lt;/span&gt; -e &lt;span class="nv"&gt;$*&lt;/span&gt;.bbl &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;BIBTEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
+    @if egrep -q &lt;span class="k"&gt;$(&lt;/span&gt;RERUN&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt;.log &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;fi&lt;/span&gt;
+
+%.aux %.log: %.tex
+    &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt;
+    &lt;span class="k"&gt;while&lt;/span&gt; grep -e &lt;span class="s1"&gt;&amp;#39;Rerun to get&amp;#39;&lt;/span&gt; -e &lt;span class="s1"&gt;&amp;#39;run LaTeX again&amp;#39;&lt;/span&gt; *.log &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+
+%.idx %.toc: %.tex
+    &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; $&amp;lt;
+
+%.bbl %.blg: %.aux &lt;span class="k"&gt;$(&lt;/span&gt;BIB&lt;span class="k"&gt;)&lt;/span&gt;
+    bibtex $&amp;lt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt;.tex
+
+%.ind: %.idx
+    makeindex $&amp;lt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;LATEX&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="nv"&gt;$*&lt;/span&gt;.tex
+
+indent: *tex
+    &lt;span class="k"&gt;for&lt;/span&gt; i in *.tex&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; latexindent -w -y&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;defaultIndent:&amp;#39;    &amp;#39;&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;$$&lt;/span&gt;i &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
+
+clean:
+    rm -fv *.log *.aux *.dvi *.toc *.lot *.lof *.snm *.nav *.out *.tns *.bak?
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The main evolutions is the indent target to autoindent *.tex file.&lt;/p&gt;
+</content>
+    <category term="GNU"/>
+    <category term="LaTeX"/>
+    <category term="Makefile"/>
+    <category term="Writing"/>
+    <category term="how to"/>
+    <category term="tools"/>
+  </entry>
+  <entry>
+    <title>Functional Block diagram</title>
+    <link href="http://manu.hbrt.eu/functional-block-diagram.html" rel="alternate"/>
+    <published>2019-03-28T16:24:00+01:00</published>
+    <updated>2019-03-28T16:24:00+01:00</updated>
+    <author>
+      <name>manu</name>
+    </author>
+    <id>tag:manu.hbrt.eu,2019-03-28:/functional-block-diagram.html</id>
+    <summary type="html">&lt;p&gt;How to make a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Functional_flow_block_diagram"&gt;block diagram&lt;/a&gt;
+with &lt;span class="formula"&gt;&lt;span class="text"&gt;&lt;span class="unknown"&gt;\LaTeX&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;This article is mainly inspired by &lt;a class="reference external" href="http://www.texample.net/tikz/examples/control-system-principles/"&gt;tex example&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an &lt;a class="reference external" href="http://manu.hbrt.eu/files/block.tex"&gt;example&lt;/a&gt;
+with &lt;a class="reference external" href="https://sourceforge.net/projects/pgf/"&gt;tikz&lt;/a&gt;
+resulting in the following figure:&lt;/p&gt;
+&lt;div class="docutils container"&gt;
+&lt;a class="reference external" href="http://manu.hbrt.eu/files/block.pdf"&gt;&lt;object data="http://manu.hbrt.eu/images/block.svg" type="image/svg+xml"&gt;result&lt;/object&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[landscape,margin=1cm]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;geometry&lt;span class="nb"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tikz&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usetikzlibrary&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;shapes,arrows&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+
+
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;block&lt;span class="nb"&gt;}&lt;/span&gt;=[draw,fill=red!20 …&lt;/pre&gt;&lt;/div&gt;</summary>
+    <content type="html">&lt;p&gt;How to make a &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Functional_flow_block_diagram"&gt;block diagram&lt;/a&gt;
+with &lt;span class="formula"&gt;&lt;span class="text"&gt;&lt;span class="unknown"&gt;\LaTeX&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;?&lt;/p&gt;
+&lt;p&gt;This article is mainly inspired by &lt;a class="reference external" href="http://www.texample.net/tikz/examples/control-system-principles/"&gt;tex example&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is an &lt;a class="reference external" href="http://manu.hbrt.eu/files/block.tex"&gt;example&lt;/a&gt;
+with &lt;a class="reference external" href="https://sourceforge.net/projects/pgf/"&gt;tikz&lt;/a&gt;
+resulting in the following figure:&lt;/p&gt;
+&lt;div class="docutils container"&gt;
+&lt;a class="reference external" href="http://manu.hbrt.eu/files/block.pdf"&gt;&lt;object data="http://manu.hbrt.eu/images/block.svg" type="image/svg+xml"&gt;result&lt;/object&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;The code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;\documentclass&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;article&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="na"&gt;[landscape,margin=1cm]&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;geometry&lt;span class="nb"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;\usepackage&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tikz&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\usetikzlibrary&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;shapes,arrows&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+
+
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;block&lt;span class="nb"&gt;}&lt;/span&gt;=[draw,fill=red!20,rectangle,minimum height=3em,minimum width=3em]
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;sum&lt;span class="nb"&gt;}&lt;/span&gt;=[draw,fill=red!20,circle,node distance=3em]
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;input&lt;span class="nb"&gt;}&lt;/span&gt;=[coordinate]
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;output&lt;span class="nb"&gt;}&lt;/span&gt;=[coordinate]
+&lt;span class="k"&gt;\tikzstyle&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;pinstyle&lt;span class="nb"&gt;}&lt;/span&gt;=[pin edge=&lt;span class="nb"&gt;{&lt;/span&gt;to-,thin,black&lt;span class="nb"&gt;}&lt;/span&gt;]
+
+&lt;span class="k"&gt;\begin&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tikzpicture&lt;span class="nb"&gt;}&lt;/span&gt;[auto,node distance=8em,&amp;gt;=latex&amp;#39;]
+
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[input,name=input]&lt;/span&gt;&lt;span class="nb"&gt;{}&lt;/span&gt;;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[block,right of=input]&lt;/span&gt;(first)&lt;span class="nb"&gt;{&lt;/span&gt;First block&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[draw,-&amp;gt;]&lt;/span&gt;(input) -- node&lt;span class="nb"&gt;{}&lt;/span&gt;(first);
+
+    &lt;span class="c"&gt;% increase node distance to avoid overlap&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[block,right of=first,node distance=15em]&lt;/span&gt;(second)&lt;span class="nb"&gt;{&lt;/span&gt;Block with math and long text: &lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nv"&gt;\int&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(first) -- (second);
+
+    &lt;span class="c"&gt;% second input&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[sum,right of=second,node distance=12em]&lt;/span&gt;(circle0)&lt;span class="nb"&gt;{&lt;/span&gt;X&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[input,above of=circle0]&lt;/span&gt;(input0)&lt;span class="nb"&gt;{&lt;/span&gt;second input&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(second) -- node&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;(circle0);
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(input0) -- node&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;(circle0);
+
+    &lt;span class="c"&gt;% nominal block&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[block,right of=circle0,name=useless,node distance=14em,pin={[pinstyle]&lt;/span&gt;above:Upward entry&lt;span class="nb"&gt;}&lt;/span&gt;,pin=&lt;span class="nb"&gt;{&lt;/span&gt;[pinstyle]below:Other entry&lt;span class="nb"&gt;}&lt;/span&gt;]&lt;span class="nb"&gt;{&lt;/span&gt;Useless block&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(circle0) -- node&lt;span class="nb"&gt;{&lt;/span&gt;something written&lt;span class="nb"&gt;}&lt;/span&gt; (useless);
+
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[block,right of=useless]&lt;/span&gt;(last)&lt;span class="nb"&gt;{&lt;/span&gt;Last&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;,dashed]&lt;/span&gt;(useless) -- node[name=dashed]&lt;span class="nb"&gt;{}&lt;/span&gt;(last);
+
+    &lt;span class="c"&gt;% output1&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[output,right of=last,node distance=4em]&lt;/span&gt;(shadow)&lt;span class="nb"&gt;{}&lt;/span&gt;;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[output,right of=shadow,node distance=4em]&lt;/span&gt;(output)&lt;span class="nb"&gt;{}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(last) -- node&lt;span class="nb"&gt;{&lt;/span&gt;out&lt;span class="nb"&gt;}&lt;/span&gt;(output);
+
+    &lt;span class="c"&gt;% feedback&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[block,below of=dashed]&lt;/span&gt;(feedback)&lt;span class="nb"&gt;{}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(shadow) |- (feedback);
+
+
+    &lt;span class="c"&gt;%  second circle&lt;/span&gt;
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[sum,left of=feedback,node distance=6em]&lt;/span&gt;(circle1)&lt;span class="nb"&gt;{&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s"&gt;$&lt;/span&gt;&lt;span class="nb"&gt;}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(feedback) -- (circle1);
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(circle1) -| node&lt;span class="nb"&gt;{&lt;/span&gt;ugly&lt;span class="nb"&gt;}&lt;/span&gt;(circle0);
+
+    &lt;span class="k"&gt;\node&lt;/span&gt;&lt;span class="na"&gt;[input,below of=circle1,node distance=2em]&lt;/span&gt;(input2)&lt;span class="nb"&gt;{}&lt;/span&gt;;
+    &lt;span class="k"&gt;\draw&lt;/span&gt;&lt;span class="na"&gt;[-&amp;gt;]&lt;/span&gt;(input2) -- (circle1);
+
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;tikzpicture&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;\end&lt;/span&gt;&lt;span class="nb"&gt;{&lt;/span&gt;document&lt;span class="nb"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+    <category term="LaTeX"/>
+    <category term="how to"/>
+  </entry>
+</feed>

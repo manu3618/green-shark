@@ -60,3 +60,13 @@ func TestBow(t *testing.T) {
 		}
 	}
 }
+
+func TestHtmlArticle(t *testing.T) {
+	input, err := ioutil.ReadFile("testdata/manu.hbrt.eu.xml")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+    //TODO compare HtmlToArticle(input) and test data
+	HtmlToArticle(input)
+}

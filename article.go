@@ -15,6 +15,7 @@ type Article struct {
 	Content string
 	Date    time.Time
 	Title   string
+	Link    string
 }
 
 func (art Article) ToWordVector() map[string]int {
