@@ -6,48 +6,59 @@ package greenshark
 
 import (
 	"encoding/xml"
+	"github.com/mattermost/html2text"
 	"io/ioutil"
 	"log"
 	"net/http"
-    "time"
-    "github.com/mattermost/html2text"
+	"time"
 )
 
-type RssArticles struct{
-    XMLName xml.Name `feed`
-    Articles []RssArticle `xml:"entry"`
+
+type RssArticles struct {
+	XMLName  xml.Name     `feed`
+	Articles []RssArticle `xml:"entry"`
 }
 
+
+type Link struct {
+	XMLName xml.Name `link`
+	Href    string   `xml:"href,attr"`
+}
+
+
 type RssArticle struct {
-	XMLName xml.Name `entry`
-	Title   string   `xml:"title"`
-	//Link string `xml:"link,attr"` //TODO
+	XMLName     xml.Name  `entry`
+	Title       string    `xml:"title"`
 	DateCreated time.Time `xml:"published"`
 	DateUpdated time.Time `xml:"updated"`
-	Id          string `xml:"id"`
-	Content     string `xml:"content"`
+	Id          string    `xml:"id"`
+	Content     string    `xml:"content"`
+	Link        Link      `xml:"link"`
 }
+
 
 func HtmlToArticle(html []byte) []Article {
 	var ret []Article
 	var rss_articles RssArticles
 	xml.Unmarshal(html, &rss_articles)
 	for _, art := range rss_articles.Articles {
-        var cur Article
-        cur.Id = art.Id
-        cur.Content, _ = html2text.FromString(art.Content) //TODO plain text
-        cur.Title = art.Title
+		var cur Article
+		cur.Id = art.Id
+		cur.Content, _ = html2text.FromString(art.Content)
+		cur.Title = art.Title
+		cur.Link = art.Link.Href
 
-        // date
-        cur.Date = art.DateCreated
-        if art.DateUpdated.After(art.DateCreated) {
-            cur.Date = art.DateUpdated
-        }
+		// date
+		cur.Date = art.DateCreated
+		if art.DateUpdated.After(art.DateCreated) {
+			cur.Date = art.DateUpdated
+		}
 
 		ret = append(ret, cur)
 	}
 	return ret
 }
+
 
 func getRss(url string) []Article {
 	response, err := http.Get(url)
